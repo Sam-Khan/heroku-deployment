@@ -8,4 +8,4 @@ app = Flask(__name__)
 def main():
     return jsonify({'hello':'world'}), 200
 
-app.run(debug=True)
+app.run(debug=False)
