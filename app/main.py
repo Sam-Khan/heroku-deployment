@@ -12,6 +12,15 @@ todo_list = [
     'task_desc':'loream epsum for task'}
 ]
 
+@app.route("/")
+def main():
+    documentation = """
+    get tasks [GET] : <server>/todo/api/v1/tasks \n
+    add task [POST] : <server>/todo/api/v1/<task_id>/task \n
+    search task [GET]  : <server>/todo/api/v1/<task_id>/task
+    """
+    return documentation, 200
+
 @app.route("/todo/api/v1/tasks")
 def list_tasks():
     return jsonify(todo_list), 200
