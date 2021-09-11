@@ -14,7 +14,7 @@ todo_list = [
 
 @app.route("/todo/api/v1/tasks")
 def list_tasks():
-        return jsonify(todo_list), 200
+    return jsonify(todo_list), 200
 
 
 @app.route( "/todo/api/v1/<task_id>/task", methods=['GET'])
